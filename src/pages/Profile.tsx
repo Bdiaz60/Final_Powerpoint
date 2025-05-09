@@ -1,6 +1,13 @@
 import { getLoggedInUser, logoutUser, getUserOrders } from "../utils/auth";
 import { useNavigate } from "react-router-dom";
 
+type Order = {
+  drink: string;
+  sweetness: string;
+  toppings: string[];
+  notes?: string;
+};
+
 export default function Profile() {
   const user = getLoggedInUser();
   const navigate = useNavigate();
@@ -10,7 +17,7 @@ export default function Profile() {
     return null;
   }
 
-  const orders = getUserOrders(user.email);
+  const orders: Order[] = getUserOrders(user.email);
 
   const handleLogout = () => {
     logoutUser();
@@ -33,7 +40,7 @@ export default function Profile() {
         <p>No past orders yet.</p>
       ) : (
         <ul>
-          {orders.map((order, index) => (
+          {orders.map((order: Order, index: number) => (
             <li key={index}>
               <strong>Drink:</strong> {order.drink} |{" "}
               <strong>Sweetness:</strong> {order.sweetness} |{" "}
