@@ -33,7 +33,7 @@ export default function Order() {
       sweetness,
       toppings,
       notes,
-      date: new Date().toISOString(), // optional: track date
+      date: new Date().toISOString(),
     };
 
     saveOrder(order);

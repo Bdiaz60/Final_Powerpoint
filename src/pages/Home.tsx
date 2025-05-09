@@ -1,12 +1,14 @@
-import TimeDisplay from "../components/TimeDisplay";
-<TimeDisplay />;
-
 export default function Home() {
   return (
     <>
       <div className="jumbotron">
+        <img
+          src="/bobaone.jpg"
+          alt="Featured Boba"
+          className="jumbotron-image"
+        />
         <div className="jumbotron-content">
-          <h1>Hollys's Boba St.</h1>
+          <h1>Holly's Boba St.</h1>
         </div>
       </div>
 

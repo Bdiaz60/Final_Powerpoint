@@ -54,7 +54,7 @@ export default function About() {
           <span className="customer">– Andres B.</span>
         </blockquote>
         <blockquote>
-          “The matcha latte here is heavenly. It’s my weekly treat!”
+          “The matcha latte here is amazing. It’s my weekly treat!”
           <span className="customer">– Liam D.</span>
         </blockquote>
         <blockquote>
